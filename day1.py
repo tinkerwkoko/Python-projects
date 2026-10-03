@@ -38,8 +38,8 @@ y1 = 3
 x2 = 10
 y2 = 8
 
-r = (x1 - y1)
-s = (x2 - y2)
-d = math.sqrt(r ** 2 + s ** 2)
+dx = (x2 - x1)
+dy = (y2 - y1)
+d = math.sqrt(dx ** 2 + dy ** 2)
 
 print(d)
