@@ -36,6 +36,15 @@ area_of_circle = math.pi * radius ** 2
 circum_of_circle = 2 * math.pi * radius
 
 #Calculate the slope, x-intercept and y-intercept of y = 2x -2
+m = 2
+b = -2
+x_intercept = -b / m
+print("Slope: ", m)
+print("y intercept: ", b)
+print("x intercept: ", x_intercept)
+
+
+
 #Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
 #Compare the slopes in tasks 8 and 9.
 #Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
