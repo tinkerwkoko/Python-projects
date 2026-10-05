@@ -44,17 +44,62 @@ print("y intercept: ", b)
 print("x intercept: ", x_intercept)
 
 
-
 #Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
+x1 = 2
+x2 = 6
+y1 = 2
+y2 = 10
+
+slope = (y2 - y1) / (x2 - x1)
+dx = x2 - x1
+dy = y2 - y1
+distance = math.sqrt(dx ** 2 + dy ** 2)
+print(distance)
+
 #Compare the slopes in tasks 8 and 9.
+print(slope >= m)
+
 #Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
+
+
 #Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+x = len("python")
+y = len("dragon")
+print(x > y)
+print(x)
+print(y)
+
 #Use and operator to check if 'on' is found in both 'python' and 'dragon'
+if "on" in "python" and "on" in "dragon":
+  print("yes")
+
 #I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+if "jargon" in "I hope this course is not full of jargon":
+  print("yes")
+
 #There is no 'on' in both dragon and python
+if "on" not in "python" and "on" not in "dragon":
+  print("yes")
+
 #Find the length of the text python and convert the value to float and convert it to string
+x = len("python")
+print(x)
+print(float(x))
+print(str(x))
+
 #Even numbers are divisible by 2 and the remainder is zero. How do you check if a number is even or not using python?
+x = int(input("Enter a number: "))
+
+if x % 2 == 0:
+  print(f"{x} is Even")
+else:
+  print(f"{x} is Odd")
+
 #Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+print(7 // 3 == int(2.7))
+
 #Check if type of '10' is equal to type of 10
+
+
 #Check if int('9.8') is equal to 10
 #Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
