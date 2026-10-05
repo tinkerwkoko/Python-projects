@@ -60,7 +60,24 @@ print(distance)
 print(slope >= m)
 
 #Calculate the value of y (y = x^2 + 6x + 9). Try to use different x values and figure out at what x value y is going to be 0.
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
 
+discriminant = b**2 - 4*a*c
+
+if discriminant > 0:
+    x1 = (-b + math.sqrt(discriminant)) / (2*a)
+    x2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print(f"x = {x1}")
+    print(f"x = {x2}")
+
+elif discriminant == 0:
+    x = -b / (2*a)
+    print(f"x = {x}")
+
+else:
+    print("There are no real solutions.")
 
 #Find the length of 'python' and 'dragon' and make a falsy comparison statement.
 x = len("python")
@@ -110,3 +127,22 @@ rate_per_hour = float(input("Enter the rate per hour: "))
 pay = hours_worked * rate_per_hour
 
 print(f" Your pay is {pay:.2f}")
+
+#Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+try:
+  number_of_years = int(input("Enter your age: "))
+
+  if number_of_years < 0 or number_of_years > 100:
+    print("Age must be between 0 and 100")
+  else:
+    seconds_lived = number_of_years * 365 * 24 * 60 * 60
+    print(f"You have lived approximately {seconds_lived} seconds")
+
+except ValueError:
+  print("Please enter a valid number.")
+
+#Write a Python script that displays the following table
+for number in range(1, 6):
+    for power in range(4):
+        print(number ** power, end=" ")
+    print()
