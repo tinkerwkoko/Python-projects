@@ -21,6 +21,13 @@ perimeter_of_triangle = a + b + c
 print(perimeter_of_triangle)
 
 #Get length and width of a rectangle using prompt. Calculate its area (area = length x width) and perimeter (perimeter = 2 x (length + width))
+length = float(input("Enter length of rectangle: "))
+width = float(input("Enter width of rectangle: "))
+area_of_rectangle = length * width
+perimeter_of_rectangle = 2 * (length + width)
+
+print(area_of_rectangle)
+print(perimeter_of_rectangle)
 
 #Get radius of a circle using prompt. Calculate the area (area = pi x r x r) and circumference (c = 2 x pi x r) where pi = 3.14.
 #Calculate the slope, x-intercept and y-intercept of y = 2x -2
