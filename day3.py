@@ -99,7 +99,14 @@ else:
 print(7 // 3 == int(2.7))
 
 #Check if type of '10' is equal to type of 10
-
+print(type("10") == type(10))
 
 #Check if int('9.8') is equal to 10
+print(int(float("9.8")) == (10))
+
 #Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+hours_worked = float(input("Enter the hours you worked: "))
+rate_per_hour = float(input("Enter the rate per hour: "))
+pay = hours_worked * rate_per_hour
+
+print(f" Your pay is {pay:.2f}")
