@@ -21,7 +21,13 @@ print(len(company))
 print(company.upper())
 
 #Change all the characters to lowercase letters using lower() method.
+print(company.lower())
+
 #Use capitalize(), title(), swapcase() methods to format the value of the string Coding For All.
+print(company.capitalize())
+print(company.title())
+print(company.swapcase())
+
 #Cut(slice) out the first word of Coding For All string.
 #Check if Coding For All string contains a word Coding using the method index, find or other methods.
 #Replace the word coding in the string 'Coding For All' to Python.
