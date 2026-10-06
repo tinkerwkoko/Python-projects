@@ -43,7 +43,7 @@ my_word = "Python for Everyone"
 print(my_word.replace("Everyone", "All"))
 
 #Split the string 'Coding For All' using space as the separator (split()) .
-print(company.split( ))
+print(company.split())
 
 #"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
 companies = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
@@ -59,10 +59,14 @@ print(company[-1])
 print(company[10])
 
 #Create an acronym or an abbreviation for the name 'Python For Everyone'.
-
+words = "Python For Everyone".split()
+acronym = words[0][0] + words[1][0] + words[2][0]
+print(acronym)
 
 #Create an acronym or an abbreviation for the name 'Coding For All'.
-
+words = "Coding For All".split()
+acrony = words[0][0] + words[1][0] + words[2][0]
+print(acrony)
 
 #Use index to determine the position of the first occurrence of C in Coding For All.
 print(company.index("C"))
@@ -71,6 +75,7 @@ print(company.index("C"))
 print(company.index("F"))
 
 #Use rfind to determine the position of the last occurrence of l in Coding For All People.
+sentence_3 = "Coding For All People"
 print(company.rfind("l"))
 
 #Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
@@ -78,7 +83,7 @@ new_sentence = 'You cannot end a sentence with because because because is a conj
 print(new_sentence.index("because"))
 
 #Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-print(new_sentence.rfind("because"))
+print(new_sentence.rindex("because"))
 
 #Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
 print(new_sentence[31:54])
@@ -87,14 +92,14 @@ print(new_sentence[31:54])
 print(new_sentence.find("because"))
 
 #Does 'Coding For All' start with a substring Coding?
-print(company.find("Coding"))
+print(company.startswith("Coding"))
 
 #Does 'Coding For All' end with a substring coding?
-print(company.rfind("Coding"))
+print(company.endswith("Coding"))
 
 #'   Coding For All      '  , remove the left and right trailing spaces in the given string.
 company_2 = '   Coding For All      '  
-print(company_2.strip( ))
+print(company_2.strip())
 
 #Which one of the following variables return True when we use the method isidentifier():
 sentence_1= "30DaysOfPython"
@@ -109,6 +114,24 @@ print('# '.join(py_libraries))
 #Use the new line escape sequence to separate the following sentences. I am enjoying this challenge. I just wonder what is next.
 print("I\nam\nenjoying\nthis\nchallenge.")
 print("I\njust\nwonder\nwhat\nis\nnext.")
-#Use a tab escape sequence to write the following lines.
-#Use the string formatting method to display the following:
 
+#Use a tab escape sequence to write the following lines.
+print("\tName      \tAge     \tCountry   \tCity")
+print("\tAsabeneh  \t250     \tFinland   \tHelsinki")
+
+#Use the string formatting method to display the following:
+radius = 10
+area = 3.14 * radius ** 2
+print(f"The area of a circle with radius {radius} is {area} meters square.")
+
+#Make the following using string formatting methods:
+
+a = 8
+b = 6
+print(f"{a} + {b} = {a + b}")
+print(f"{a} - {b} = {a - b}")
+print(f"{a} * {b} = {a * b}")
+print(f"{a} / {b} = {a / b}")
+print(f"{a} % {b} = {a % b}")
+print(f"{a} // {b} = {a // b}")
+print(f"{a} ** {b} = {a ** b}")
