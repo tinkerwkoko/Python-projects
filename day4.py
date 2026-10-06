@@ -51,15 +51,35 @@ print(companies.split(","))
 
 #What is the character at index 0 in the string Coding For All.
 print(company[0])
+
 #What is the last index of the string Coding For All.
+print(company[-1])
+
 #What character is at index 10 in "Coding For All" string.
+print(company[10])
+
 #Create an acronym or an abbreviation for the name 'Python For Everyone'.
+
+
 #Create an acronym or an abbreviation for the name 'Coding For All'.
+
+
 #Use index to determine the position of the first occurrence of C in Coding For All.
+print(company.index("C"))
+
 #Use index to determine the position of the first occurrence of F in Coding For All.
+print(company.index("F"))
+
 #Use rfind to determine the position of the last occurrence of l in Coding For All People.
+print(company.rfind("l"))
+
 #Use index or find to find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+new_sentence = 'You cannot end a sentence with because because because is a conjunction'
+print(new_sentence.index("because"))
+
 #Use rindex to find the position of the last occurrence of the word because in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(new_sentence.rfind("because"))
+
 #Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
 #Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
 #Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
