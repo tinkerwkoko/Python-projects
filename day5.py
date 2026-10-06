@@ -38,10 +38,12 @@ it_companies[2] = "Paystack"
 print(it_companies)
 
 #Add an IT company to it_companies
-
+it_companies.append("Piggyvest")
+print(it_companies)
 
 #Insert an IT company in the middle of the companies list
-
+it_companies.insert(2, "Flutterwave")
+print(it_companies)
 
 #Change one of the it_companies names to uppercase (IBM excluded!)
 
@@ -56,8 +58,10 @@ print("Amazon" in it_companies)
 print(it_companies.sort())
 
 #Reverse the list in descending order using reverse() method
+print(it_companies.reverse())
 
 #Slice out the first 3 companies from the list
+print(it_companies[:3])
 
 #Slice out the last 3 companies from the list
 
