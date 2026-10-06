@@ -9,9 +9,17 @@ result = ' '.join(conca)
 print(result)
 
 #Declare a variable named company and assign it to an initial value "Coding For All".
+company = "Coding For All"
+
 #Print the variable company using print().
+print(company)
+
 #Print the length of the company string using len() method and print().
+print(len(company))
+
 #Change all the characters to uppercase letters using upper() method.
+print(company.upper())
+
 #Change all the characters to lowercase letters using lower() method.
 #Use capitalize(), title(), swapcase() methods to format the value of the string Coding For All.
 #Cut(slice) out the first word of Coding For All string.
