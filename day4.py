@@ -39,9 +39,18 @@ print(company.find("Coding"))
 print(company.replace("Coding", "Python"))
 
 #Change "Python for Everyone" to "Python for All" using the replace method or other methods.
+my_word = "Python for Everyone"
+print(my_word.replace("Everyone", "All"))
+
 #Split the string 'Coding For All' using space as the separator (split()) .
+print(company.split( ))
+
 #"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+companies = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+print(companies.split(","))
+
 #What is the character at index 0 in the string Coding For All.
+print(company[0])
 #What is the last index of the string Coding For All.
 #What character is at index 10 in "Coding For All" string.
 #Create an acronym or an abbreviation for the name 'Python For Everyone'.
