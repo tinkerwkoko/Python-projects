@@ -29,8 +29,15 @@ print(company.title())
 print(company.swapcase())
 
 #Cut(slice) out the first word of Coding For All string.
+company_slice = company[:6]
+print(company_slice)
+
 #Check if Coding For All string contains a word Coding using the method index, find or other methods.
+print(company.find("Coding"))
+
 #Replace the word coding in the string 'Coding For All' to Python.
+print(company.replace("Coding", "Python"))
+
 #Change "Python for Everyone" to "Python for All" using the replace method or other methods.
 #Split the string 'Coding For All' using space as the separator (split()) .
 #"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
