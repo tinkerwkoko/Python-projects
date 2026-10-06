@@ -81,16 +81,34 @@ print(new_sentence.index("because"))
 print(new_sentence.rfind("because"))
 
 #Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(new_sentence[31:54])
+
 #Find the position of the first occurrence of the word 'because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
-#Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print(new_sentence.find("because"))
+
 #Does 'Coding For All' start with a substring Coding?
+print(company.find("Coding"))
+
 #Does 'Coding For All' end with a substring coding?
+print(company.rfind("Coding"))
+
 #'   Coding For All      '  , remove the left and right trailing spaces in the given string.
+company_2 = '   Coding For All      '  
+print(company_2.strip( ))
+
 #Which one of the following variables return True when we use the method isidentifier():
-#30DaysOfPython
-#thirty_days_of_python
+sentence_1= "30DaysOfPython"
+sentence_2 = "thirty_days_of_python"
+print(sentence_1.isidentifier())
+print(sentence_2.isidentifier())
+
 #The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
-#Use the new line escape sequence to separate the following sentences
+py_libraries = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print('# '.join(py_libraries))
+
+#Use the new line escape sequence to separate the following sentences. I am enjoying this challenge. I just wonder what is next.
+print("I\nam\nenjoying\nthis\nchallenge.")
+print("I\njust\nwonder\nwhat\nis\nnext.")
 #Use a tab escape sequence to write the following lines.
 #Use the string formatting method to display the following:
 
