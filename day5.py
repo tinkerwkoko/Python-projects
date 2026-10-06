@@ -3,7 +3,7 @@ first_list = []
 print(first_list)
 
 #Declare a list with more than 5 items
-second_list = ["Apple", "Banana", "Oranges", "Pears", "Guava"]
+second_list = ["Apple", "Banana", "Oranges", "Pears", "Guava", "Carrot"]
 print(second_list)
 
 #Find the length of your list
@@ -46,7 +46,8 @@ it_companies.insert(2, "Flutterwave")
 print(it_companies)
 
 #Change one of the it_companies names to uppercase (IBM excluded!)
-
+it_companies[2] = it_companies[2].upper()
+print(it_companies)
 
 #Join the it_companies with a string '#;  '
 print('#;  '.join(it_companies))
@@ -55,10 +56,11 @@ print('#;  '.join(it_companies))
 print("Amazon" in it_companies)
 
 #Sort the list using sort() method
-print(it_companies.sort())
-
+it_companies.sort()
+print(it_companies)
 #Reverse the list in descending order using reverse() method
-print(it_companies.reverse())
+it_companies.reverse()
+print(it_companies)
 
 #Slice out the first 3 companies from the list
 print(it_companies[:3])
@@ -68,30 +70,284 @@ print(it_companies[:3])
 #Slice out the middle IT company or companies from the list
 
 #Remove the first IT company from the list
+it_companies.pop(0)
+print(it_companies)
 
 #Remove the middle IT company or companies from the list
+it_companies.remove("Paystack")
+print(it_companies)
 
 #Remove the last IT company from the list
+it_companies.pop()
+print(it_companies)
 
 #Remove all IT companies from the list
+it_companies.clear()
 
 #Destroy the IT companies list
+del it_companies
 
 #Join the following lists:
-
 #front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
 #back_end = ['Node','Express', 'MongoDB']
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+new_list = front_end + back_end
+
+print(new_list)
+
 #After joining the lists in question 26. Copy the joined list and assign it to a variable full_stack, then insert Python and SQL after Redux.
+full_stack = new_list.copy()
+print(full_stack)
+
+full_stack.insert(5, "Python")
+full_stack.insert(6, "SQL")
+print(full_stack)
 
 #Exercises: Level 2
 #The following is a list of 10 students ages:
 #ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 #Sort the list and find the min and max age
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort(reverse=True)
+print(ages)
+print(min(ages))
+print(max(ages))
+
 #Add the min age and the max age again to the list
+ages.append(min(ages))
+print(ages)
+
+ages.append(max(ages))
+print(ages)
+
 #Find the median age (one middle item or two middle items divided by two)
+ages.sort(reverse=True)
+for age in ages:
+  if len(ages) % 2 == 0:
+    print(ages[len / 2])
+  else:
+    print(ages[len / 2])
+
 #Find the average age (sum of all items divided by their number )
+average_age = sum(ages) / len(ages)
+print(average_age)
+
 #Find the range of the ages (max minus min)
+x = min(ages)
+y = max(ages)
+
+range_of_ages = y - x
+print(range_of_ages)
+
 #Compare the value of (min - average) and (max - average), use abs() method
+a = abs(x - average_age)
+b = abs(y - average_age)
+
+print(a == b)
+
 #Find the middle country(ies) in the countries list
+countries = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Antigua and Barbuda',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Barbados',
+  'Belarus',
+  'Belgium',
+  'Belize',
+  'Benin',
+  'Bhutan',
+  'Bolivia',
+  'Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cabo Verde',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombia',
+  'Comoros',
+  'Congo, Democratic Republic of the',
+  'Congo, Republic of the',
+  'Costa Rica',
+  "Côte d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor-Leste)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Eswatini',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+  'Mauritania',
+  'Mauritius',
+  'Mexico',
+  'Micronesia',
+  'Moldova',
+  'Monaco',
+  'Mongolia',
+  'Montenegro',
+  'Morocco',
+  'Mozambique',
+  'Myanmar',
+  'Namibia',
+  'Nauru',
+  'Nepal',
+  'Netherlands',
+  'New Zealand',
+  'Nicaragua',
+  'Niger',
+  'Nigeria',
+  'North Macedonia',
+  'Norway',
+  'Oman',
+  'Pakistan',
+  'Palau',
+  'Palestine',
+  'Panama',
+  'Papua New Guinea',
+  'Paraguay',
+  'Peru',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Rwanda',
+  'Saint Kitts and Nevis',
+  'Saint Lucia',
+  'Saint Vincent and the Grenadines',
+  'Samoa',
+  'San Marino',
+  'Sao Tome and Principe',
+  'Saudi Arabia',
+  'Senegal',
+  'Serbia',
+  'Seychelles',
+  'Sierra Leone',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'Solomon Islands',
+  'Somalia',
+  'South Africa',
+  'South Sudan',
+  'Spain',
+  'Sri Lanka',
+  'Sudan',
+  'Suriname',
+  'Sweden',
+  'Switzerland',
+  'Syria',
+  'Tajikistan',
+  'Tanzania',
+  'Thailand',
+  'Togo',
+  'Tonga',
+  'Trinidad and Tobago',
+  'Tunisia',
+  'Turkey',
+  'Turkmenistan',
+  'Tuvalu',
+  'Uganda',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Uruguay',
+  'Uzbekistan',
+  'Vanuatu',
+  'Vatican City',
+  'Venezuela',
+  'Vietnam',
+  'Yemen',
+  'Zambia',
+  'Zimbabwe'
+];
 #Divide the countries list into two equal lists if it is even if not one more country for the first half.
+x = len(countries)
+
+for i in x:
+  if x % 2 == 0:
+    print
 #['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries
