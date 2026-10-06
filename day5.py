@@ -50,8 +50,10 @@ print(it_companies)
 print('#;  '.join(it_companies))
 
 #Check if a certain company exists in the it_companies list.
+print("Amazon" in it_companies)
 
 #Sort the list using sort() method
+print(it_companies.sort())
 
 #Reverse the list in descending order using reverse() method
 
