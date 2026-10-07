@@ -13,14 +13,17 @@ your_age = int(input("Enter your age: "))
 age_diff = abs(my_age - your_age)
 
 if my_age > your_age:
-  if age_diff == 1:
-    print(f"I am {age_diff} year older than you")
-  elif age_diff > 1:
-    print(f"I am {age_diff} years older than you")
-  else:
-    print("We are age mates")
+    if age_diff == 1:
+        print(f"I am {age_diff} year older than you")
+    else:
+        print(f"I am {age_diff} years older than you")
 else:
-  print(f"you're {age_diff} years older than me")
+    if age_diff == 0:
+        print("We are age mates")
+    elif age_diff == 1:
+        print(f"You're {age_diff} year older than me")
+    else:
+        print(f"You're {age_diff} years older than me")
 
 #Get two numbers from the user using input prompt. If a is greater than b return a is greater than b, if a is less b return a is smaller than b, else a is equal to b. Output:
 a = int(input("Enter first number: "))
@@ -52,7 +55,7 @@ else:
 winter = ["December", "January", "February"]
 autumn = ["September", "October", "November"]
 spring = ["March", "April", "May"]
-summer = ["June", "July" "August"]
+summer = ["June", "July", "August"]
 month = str(input("Enter month: "))
 
 if month in autumn:
@@ -104,7 +107,7 @@ else:
 
 # Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
 if "skills" in person:
-  if "Python" in "skills":
+  if "Python" in person["skills"]:
     print("person has Python skills")
   else:
     print("person doesn't have Python skills")
@@ -112,7 +115,16 @@ else:
   print("skill not in dictionary")
 
 # If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
+if "JavaScript" in person["skills"] and "React" in person["skills"]:
+    print("He is a front end developer")
+elif "Node" in person["skills"] and "Python" in person["skills"] and "MongoDB" in person["skills"]:
+    print("He is a backend developer")
+elif "React" in person["skills"] and "Node" in person["skills"] and "MongoDB" in person["skills"]:
+    print("He is a fullstack developer")
+else:
+    print("unknown title")
+
 
 #If the person is married and if he lives in Finland, print the information in the following format: Asabeneh Yetayeh lives in Finland. He is married.
-if "is_married":
-  print(person["first_name"] + " " + person["last_name"] + " " + "lives" + " " + "in" + " " + person["country"])
+if person["is_married"] and person["country"] == "Finland":
+    print(f'{person["first_name"]} {person["last_name"]} lives in Finland. He is married.')
