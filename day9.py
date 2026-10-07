@@ -1,10 +1,11 @@
 #Get user input using input(“Enter your age: ”). If user is 18 or older, give feedback: You are old enough to drive. If below 18 give feedback to wait for the missing amount of years. Output:
 age = int(input("Enter your age: "))
+age_difference = 18 - age
 
 if age >= 18:
   print("You are old enough to drive.")
 else:
-  print("You need 3 more years to learn to drive.")
+  print(f"You need {age_difference} more years to learn to drive.")
 
 #Compare the values of my_age and your_age using if … else. Who is older (me or you)? Use input(“Enter your age: ”) to get the age as input. You can use a nested condition to print 'year' for 1 year difference in age, 'years' for bigger differences, and a custom text if my_age = your_age. Output:
 my_age = 20
@@ -30,15 +31,15 @@ else:
 
 
 #Write a code which gives grade to students according to theirs scores:
-score = float("Enter student score: ")
+score = float(input("Enter student score: "))
 
-if score > 90:
+if score >= 90:
   print("Grade: A")
-elif score > 80:
+elif score >= 80:
   print("Grade: B")
-elif score > 70:
+elif score >= 70:
   print("Grade: C")
-elif score > 60:
+elif score >= 60:
   print("Grade: D")
 else:
   print("Grade: F")
@@ -109,4 +110,4 @@ else:
 
 #If the person is married and if he lives in Finland, print the information in the following format: Asabeneh Yetayeh lives in Finland. He is married.
 if "is_married":
-  print(person["first_name"] + " " + person["last_name"] + " " + "lives" + "in" + person["country"])
+  print(person["first_name"] + " " + person["last_name"] + " " + "lives" + " " + "in" + " " + person["country"])
