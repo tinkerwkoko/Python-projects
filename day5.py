@@ -13,6 +13,7 @@ print(len(first_list))
 #Get the first item, the middle item and the last item of the list
 print(second_list[0])
 print(second_list[2])
+print(second_list[3])
 print(second_list[-1])
 
 #Declare a list called mixed_data_types, put your(name, age, height, marital status, address)
@@ -30,7 +31,7 @@ print(len(it_companies))
 
 #Print the first, middle and last company
 print(it_companies[0])
-print(it_companies[4])
+print(it_companies[3])
 print(it_companies[-1])
 
 #Print the list after modifying one of the companies
@@ -66,15 +67,28 @@ print(it_companies)
 print(it_companies[:3])
 
 #Slice out the last 3 companies from the list
+print(it_companies[-3:])
 
 #Slice out the middle IT company or companies from the list
+middle = len(it_companies) // 2
+
+if len(it_companies) % 2 == 0:
+    print(it_companies[middle - 1:middle + 1])
+else:
+    print(it_companies[middle])
 
 #Remove the first IT company from the list
 it_companies.pop(0)
 print(it_companies)
 
 #Remove the middle IT company or companies from the list
-it_companies.remove("Paystack")
+middle = len(it_companies) // 2
+
+if len(it_companies) % 2 == 0:
+    del it_companies[middle - 1:middle + 1]
+else:
+    del it_companies[middle]
+
 print(it_companies)
 
 #Remove the last IT company from the list
@@ -122,12 +136,16 @@ ages.append(max(ages))
 print(ages)
 
 #Find the median age (one middle item or two middle items divided by two)
-ages.sort(reverse=True)
-for age in ages:
-  if len(ages) % 2 == 0:
-    print(ages[len / 2])
-  else:
-    print(ages[len / 2])
+ages.sort()
+
+if len(ages) % 2 == 0:
+    middle = len(ages) // 2
+    median = (ages[middle - 1] + ages[middle]) / 2
+else:
+    middle = len(ages) // 2
+    median = ages[middle]
+
+print(median)
 
 #Find the average age (sum of all items divided by their number )
 average_age = sum(ages) / len(ages)
@@ -345,9 +363,23 @@ countries = [
   'Zimbabwe'
 ];
 #Divide the countries list into two equal lists if it is even if not one more country for the first half.
-x = len(countries)
+middle = len(countries) // 2
 
-for i in x:
-  if x % 2 == 0:
-    print
+if len(countries) % 2 == 0:
+    first_half = countries[:middle]
+    second_half = countries[middle:]
+else:
+    first_half = countries[:middle + 1]
+    second_half = countries[middle + 1:]
+
+print(first_half)
+print(second_half)
 #['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries
+countries_list = ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']
+
+country_1, country_2, country_3, *scandic = countries_list
+
+print(country_1)
+print(country_2)
+print(country_3)
+print(scandic)
