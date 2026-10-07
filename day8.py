@@ -11,7 +11,7 @@ student = {
   "gender": "Female",
   "age": 25,
   "marital_status": "Single",
-  "Skills": "Product Management",
+  "Skills":['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
   "country": "Nigeria",
   "city": "Lagos",
   "address": "Ikotun"
@@ -21,8 +21,11 @@ student = {
 print(len(student))
 
 #Get the value of skills and check the data type, it should be a list
+print(student.get("Skills"))
+print(type("Skills"))
 
 #Modify the skills values by adding one or two skills
+
 
 #Get the dictionary keys as a list
 
