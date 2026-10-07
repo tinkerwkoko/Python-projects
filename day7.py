@@ -28,21 +28,24 @@ print(C)
 #Find A intersection B
 D = A & B
 print(D)
-#Is A subset of B
 
+#Is A subset of B
+A.issubset(B)
 
 #Are A and B disjoint sets
-
+A.isdisjoint(B)
 
 #Join A with B and B with A
 F = A | B & B |A
 print(F)
+
 #What is the symmetric difference between A and B
-G = A - B
+G = A ^ B
 print(G)
 
 #Delete the sets completely
-
+del A
+del B
 
 #Convert the ages to a set and compare the length of the list and the set, which one is bigger?
 new_age = set(age)
@@ -51,6 +54,13 @@ print(new_age)
 print(len(age) > len(new_age))
 
 #Explain the difference between the following data types: string, list, tuple and set
-
+#strings are texts enclosed in single, double or triple quotes
+#lists are mutable and ordered datatype in python. represented by square brackets
+#tuples are immutable and ordered datatype in python. represented by brackets
+#sets are mutable and unordered datatype in python. represented with curly braces
 
 #I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+word = "I am a teacher and I love to inspire and teach people."
+words = word.split()
+unique_words = set(words)
+print(unique_words)
