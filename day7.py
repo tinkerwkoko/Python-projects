@@ -30,13 +30,13 @@ D = A & B
 print(D)
 
 #Is A subset of B
-A.issubset(B)
+print(A.issubset(B))
 
 #Are A and B disjoint sets
-A.isdisjoint(B)
+print(A.isdisjoint(B))
 
 #Join A with B and B with A
-F = A | B & B |A
+F = (A | B) | (B |A)
 print(F)
 
 #What is the symmetric difference between A and B
@@ -56,11 +56,12 @@ print(len(age) > len(new_age))
 #Explain the difference between the following data types: string, list, tuple and set
 #strings are texts enclosed in single, double or triple quotes
 #lists are mutable and ordered datatype in python. represented by square brackets
-#tuples are immutable and ordered datatype in python. represented by brackets
-#sets are mutable and unordered datatype in python. represented with curly braces
+#tuples are immutable and ordered datatype in python. represented by parentheses
+#Sets are mutable, unordered collections of unique elements in Python. They are represented using curly braces.
 
 #I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
 word = "I am a teacher and I love to inspire and teach people."
 words = word.split()
 unique_words = set(words)
 print(unique_words)
+print(len(unique_words))
