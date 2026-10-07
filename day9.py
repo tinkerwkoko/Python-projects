@@ -10,13 +10,17 @@ else:
 #Compare the values of my_age and your_age using if … else. Who is older (me or you)? Use input(“Enter your age: ”) to get the age as input. You can use a nested condition to print 'year' for 1 year difference in age, 'years' for bigger differences, and a custom text if my_age = your_age. Output:
 my_age = 20
 your_age = int(input("Enter your age: "))
+age_diff = my_age - your_age
 
 if my_age > your_age:
-  print("I am older than you")
+  if age_diff == 1:
+    print(f"I am {age_diff} year older than you")
+  elif age_diff > 1:
+    print(f"I am {age_diff} years older than you")
+  else:
+    print("We are age mates")
 else:
-  print("you're older than me")
-
-#You are 5 years older than me.
+  print(f"you're {age_diff} older than me")
 
 #Get two numbers from the user using input prompt. If a is greater than b return a is greater than b, if a is less b return a is smaller than b, else a is equal to b. Output:
 a = int(input("Enter first number: "))
@@ -49,7 +53,7 @@ winter = ["December", "January", "February"]
 autumn = ["September", "October", "November"]
 spring = ["March", "April", "May"]
 summer = ["June", "July" "August"]
-month = str("Enter month: ")
+month = str(input("Enter month: "))
 
 if month in autumn:
   print("The season is Autumn")
@@ -65,7 +69,7 @@ else:
 #The following list contains some fruits:
 #If a fruit doesn't exist in the list add the fruit to the list and print the modified list. If the fruit exists print('That fruit already exist in the list')
 fruits = ['banana', 'orange', 'mango', 'lemon']
-fruit = str("Enter a fruit: ")
+fruit = str(input("Enter a fruit: "))
 
 if fruit not in fruits:
   fruits.append(fruit)
@@ -89,13 +93,14 @@ person = {
 }
 # Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
 if "skills" in person:
-  middle = len("skills") // 2
-  if middle % 2 == 0:
-    print("skills"[middle - 1:middle + 1])
-  else:
-    print("skills"[middle])
+    middle = len(person["skills"]) // 2
+
+    if len(person["skills"]) % 2 == 0:
+        print(person["skills"][middle - 1:middle + 1])
+    else:
+        print(person["skills"][middle])
 else:
-  print("skill not in dictionary")
+    print("skill not in dictionary")
 
 # Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
 if "skills" in person:
