@@ -152,15 +152,15 @@ average_age = sum(ages) / len(ages)
 print(average_age)
 
 #Find the range of the ages (max minus min)
-x = min(ages)
-y = max(ages)
+min_age = min(ages)
+max_age = max(ages)
 
-range_of_ages = y - x
+range_of_ages = max_age - min_age
 print(range_of_ages)
 
 #Compare the value of (min - average) and (max - average), use abs() method
-a = abs(x - average_age)
-b = abs(y - average_age)
+a = abs(min_age - average_age)
+b = abs(max_age - average_age)
 
 print(a == b)
 
