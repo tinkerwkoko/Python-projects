@@ -22,23 +22,28 @@ print(len(student))
 
 #Get the value of skills and check the data type, it should be a list
 print(student.get("Skills"))
-print(type("Skills"))
+print(type(student.get("Skills")))
 
 #Modify the skills values by adding one or two skills
 student["Skills"].append("HTML")
 print(student)
 
 #Get the dictionary keys as a list
-student_keys = student.keys()
+student_keys = list(student.keys())
 
 #Get the dictionary values as a list
-student_values = student.values()
+student_values = list(student.values())
+
+print(student_keys)
+print(student_values)
 
 #Change the dictionary to a list of tuples using items() method
-new_student = tuple(student)
+new_student = list(student.items())
 print(new_student)
 
 #Delete one of the items in the dictionary
+student.pop("gender")
+print(student)
 
 #Delete one of the dictionaries
 del student
