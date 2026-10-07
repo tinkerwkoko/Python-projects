@@ -25,7 +25,8 @@ print(student.get("Skills"))
 print(type("Skills"))
 
 #Modify the skills values by adding one or two skills
-
+student["Skills"].append("HTML")
+print(student)
 
 #Get the dictionary keys as a list
 student_keys = student.keys()
@@ -38,7 +39,6 @@ new_student = tuple(student)
 print(new_student)
 
 #Delete one of the items in the dictionary
-
 
 #Delete one of the dictionaries
 del student
