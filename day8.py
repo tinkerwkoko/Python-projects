@@ -28,10 +28,14 @@ print(type("Skills"))
 
 
 #Get the dictionary keys as a list
+student_keys = student.keys()
 
 #Get the dictionary values as a list
+student_values = student.values()
 
 #Change the dictionary to a list of tuples using items() method
+new_student = tuple(student)
+print(new_student)
 
 #Delete one of the items in the dictionary
 
