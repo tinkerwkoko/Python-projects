@@ -1,8 +1,5 @@
-for i in range(1, 8):
-  print("#" * i)
+total = 0
 
-count = 1
-
-while count <= 7:
-  print("#" * count)
-  count = count + 1
+for i in range(101):
+  total += 1
+  print(total)

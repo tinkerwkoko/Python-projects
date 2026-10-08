@@ -27,13 +27,13 @@ for i in range(10, -1, -1):
   #####
   ######
   #######
-for i in range(8):
+for i in range(1, 8):
   print("#" * i)
 
-count = 7
+count = 1
 
 while count <= 7:
-  print("#")
+  print("#" * count)
   count = count + 1
 
 #Use nested loops to create the following:
@@ -45,6 +45,18 @@ while count <= 7:
 # # # # # # # #
 # # # # # # # #
 # # # # # # # #
+row = 1
+
+while row <= 8:
+  line = ""
+  col = 1
+
+  while col <= 8:
+    line += "#"
+    col += 1
+
+  print(line)
+  row += 1
 
 #Print the following pattern:
 #0 x 0 = 0
@@ -60,12 +72,28 @@ while count <= 7:
 #10 x 10 = 100
 
 # Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+skills = ['Python', 'Numpy','Pandas','Django', 'Flask']
+
+for skill in skills:
+  print(skill)
 
 # Use for loop to iterate from 0 to 100 and print only even numbers
+for i in range(101):
+  if i % 2 == 0:
+    print(i)
 
 # Use for loop to iterate from 0 to 100 and print only odd numbers
+for i in range(101):
+  if i % 2 == 1:
+    print(i)
 
 # Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+total = 0
+
+for i in range(101):
+  total += 1
+  print(total)
+
 # The sum of all numbers is 5050.
 
 # Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
