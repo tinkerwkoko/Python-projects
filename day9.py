@@ -115,7 +115,7 @@ else:
   print("skill not in dictionary")
 
 # If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
-if "JavaScript" in person["skills"] and "React" in person["skills"]:
+if set(person["skills"]) == {"JavaScript", "React"}:
     print("He is a front end developer")
 elif "Node" in person["skills"] and "Python" in person["skills"] and "MongoDB" in person["skills"]:
     print("He is a backend developer")
