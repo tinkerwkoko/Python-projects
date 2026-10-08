@@ -9,6 +9,15 @@ for i in range(11):
   print(i)
 
 #Iterate 10 to 0 using for loop, do the same using while loop.
+count = 10
+
+while count >= 0:
+  print(count)
+  count = count - 1
+
+
+for i in range(10, -1, -1):
+  print(i)
 
 #Write a loop that makes seven calls to print(), so we get on the output the following triangle:
   #
@@ -18,6 +27,14 @@ for i in range(11):
   #####
   ######
   #######
+for i in range(8):
+  print("#" * i)
+
+count = 7
+
+while count <= 7:
+  print("#")
+  count = count + 1
 
 #Use nested loops to create the following:
 # # # # # # # #
