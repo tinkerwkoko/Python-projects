@@ -1,7 +1,4 @@
-numbers = (0,1,2,3,4,5)
-for number in numbers:
-    print(number)
-    if number == 3:
-        continue
-    print('Next number should be ', number + 1) if number != 5 else print("loop's end") # for short hand conditions need both if and else statements
-print('outside the loop')
+for number in range(11):
+    print(number)   # prints 0 to 10, not including 11
+else:
+    print('The loop stops at', number)
