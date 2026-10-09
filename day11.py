@@ -1,3 +1,4 @@
+from collections import Counter
 country_data = [
     {
         "name": "Afghanistan",
@@ -2628,5 +2629,21 @@ for country in country_data:
 
 print(len(country_languages))
 # Find the ten most spoken languages from the data
-count
+top_ten_lang = Counter(
+  language.strip().lower()
+  for country in country_data
+  for language in country["languages"]).most_common(10)
+
+print(top_ten_lang)
+
 # Find the 10 most populated countries in the world
+populations = []
+
+for country in country_data:
+  populations.append((country["name"], country["population"]))
+
+populations.sort(reverse=True)
+top_ten = populations[:10]
+
+for population, name in top_ten:
+  print(f"{name}: {populations}")

@@ -1,3 +1,4 @@
+from collections import Counter
 #Iterate 0 to 10 using for loop, do the same using while loop.
 count = 0
 
@@ -346,7 +347,7 @@ for fruit in reversed(fruits):
   print(fruits_new)
 
 # Go to the data folder and use the countries_data.py file.
-[
+country_data = [
     {
         "name": "Afghanistan",
         "capital": "Kabul",
@@ -2975,4 +2976,21 @@ for country in country_data:
 
 print(len(country_languages))
 # Find the ten most spoken languages from the data
+top_ten_lang = Counter(
+  language.strip().lower()
+  for country in country_data
+  for language in country["languages"]).most_common(10)
+
+print(top_ten_lang)
+
 # Find the 10 most populated countries in the world
+populations = []
+
+for country in country_data:
+  populations.append((country["population"], country["name"]))
+
+populations.sort(reverse=True)
+top_ten = populations[:10]
+
+for population, name in top_ten:
+  print(f"{name}: {population}")
