@@ -25,8 +25,18 @@ for i in range(101):
 count = 0
 
 while count <= 100:
-  if i % 2 == 0:
-    print(i)
+  if count % 2 == 0:
+    print(count)
     count += 1
 
-#print all odd numbers be
+#print all odd numbers between  1 and 100
+for i in range(101):
+  if i % 2 == 1:
+    print(i)
+
+count = 0
+
+while count <= 100:
+  if count % 2 == 1:
+    print(count)
+    count += 1
