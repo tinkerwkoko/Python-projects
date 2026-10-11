@@ -27,7 +27,7 @@ count = 0
 while count <= 100:
   if count % 2 == 0:
     print(count)
-    count += 1
+  count += 1
 
 #print all odd numbers between  1 and 100
 for i in range(101):
@@ -39,4 +39,10 @@ count = 0
 while count <= 100:
   if count % 2 == 1:
     print(count)
-    count += 1
+  count += 1
+
+#5 print the multiplication table of a given number from n * 1 to n * 10
+n = int(input("Enter a number: "))
+
+for i in range(1, 11):
+  print(f"{n} * {i} = {n * i}")
