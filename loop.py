@@ -53,3 +53,13 @@ i = 1
 while i <= 10:
   print(f"{n} * {i} = {n * i}")
   i += 1
+
+#6 calculate and print the sum of the first n natural numbers
+n = int(input("Enter a number: "))
+
+numbers =[]
+for i in range(1, n+1):
+  numbers.append(i)
+
+total = sum(numbers)
+print(total)
