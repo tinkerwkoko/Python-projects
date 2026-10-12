@@ -63,3 +63,9 @@ for i in range(1, n+1):
 
 total = sum(numbers)
 print(total)
+
+n = int(input("Enter a number: "))
+
+numbers = []
+while n <= 1:
+  numbers.append()
